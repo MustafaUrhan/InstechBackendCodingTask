@@ -45,7 +45,7 @@ public sealed class InsertCoverCommandHandler : IRequestHandler<InsertCoverComma
                                          (int)newCover.Type,
                                          newCover.Premium,
                                          newCover.CreatedAt);
-        //TODO: Audit record should be send to the audit service
+                                         
         var auditNotification = new CreateOrDeleteCoverNotification(newCover.Id.ToString(), "POST");
         await _publisher.Publish(auditNotification);
         return coverResponse;

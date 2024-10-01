@@ -1,3 +1,4 @@
+using Claims.Application.Features.Claims.Notifications.CreateOrDeleteClaim;
 using Claims.Domain.Entities;
 using Claims.Domain.Repositories.Claims;
 using Claims.Domain.Repositories.Covers;
@@ -11,10 +12,12 @@ public sealed class InsertClaimCommandHandler : IRequestHandler<InsertClaimComma
 {
     private readonly ICoverQueryRepository _coverQueryRepository;
     private readonly IClaimCommandRepository _claimCommandRepository;
-    public InsertClaimCommandHandler(ICoverQueryRepository coverQueryRepository, IClaimCommandRepository claimCommandRepository)
+    private readonly IPublisher _publisher;
+    public InsertClaimCommandHandler(ICoverQueryRepository coverQueryRepository, IClaimCommandRepository claimCommandRepository, IPublisher publisher)
     {
         _coverQueryRepository = coverQueryRepository;
         _claimCommandRepository = claimCommandRepository;
+        _publisher = publisher;
     }
 
     public async Task<ErrorOr<InsertClaimResponse>> Handle(InsertClaimCommand request, CancellationToken cancellationToken)
@@ -41,7 +44,10 @@ public sealed class InsertClaimCommandHandler : IRequestHandler<InsertClaimComma
             DamageCost = request.DamageCost
         };
         await _claimCommandRepository.AddAsync(newClaim, cancellationToken);
-        //TODO: Audit record should be send to the audit service
+        
+        var auditNotification = new CreateOrDeleteClaimNotification(newClaim.Id.ToString(), "POST");
+        await _publisher.Publish(auditNotification);
+        
         return new InsertClaimResponse(newClaim.Id, newClaim.CoverId, newClaim.Created, newClaim.Name, (int)newClaim.Type, newClaim.DamageCost);
     }
 }

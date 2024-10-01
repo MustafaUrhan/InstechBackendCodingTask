@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims", "Claims\Claims.csproj", "{268F67FB-056D-4843-8823-19A5F7848271}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{003F7774-8202-4837-8C40-72297F3876C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Tests", "Claims.Tests\Claims.Tests.csproj", "{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Tests", "Claims.Tests\Claims.Tests.csproj", "{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CFB0A29-7BAB-4D83-8A3E-7E5ECFC5A8BB}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,31 +14,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Claims", "Claims", "{7B28A9F2-7893-4913-9619-FB562257017D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36DE8947-99B8-4FA7-95D3-970F2A881525}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Claims", "Claims", "{4AE50945-5CBD-4A0D-AE5A-513920BF43A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Api", "src\Claims\Claims.Api\Claims.Api.csproj", "{3966CB07-ED50-4B15-B493-35F9B81E11D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Api", "src\Claims\Claims.Api\Claims.Api.csproj", "{3966CB07-ED50-4B15-B493-35F9B81E11D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Application", "src\Claims\Claims.Application\Claims.Application.csproj", "{9E26F887-FBCB-4B3E-B591-D1591CCF4053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Application", "src\Claims\Claims.Application\Claims.Application.csproj", "{9E26F887-FBCB-4B3E-B591-D1591CCF4053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Contracts", "src\Claims\Claims.Contracts\Claims.Contracts.csproj", "{48254F12-2E5B-4477-82FD-CEA148A4D9ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Contracts", "src\Claims\Claims.Contracts\Claims.Contracts.csproj", "{48254F12-2E5B-4477-82FD-CEA148A4D9ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Domain", "src\Claims\Claims.Domain\Claims.Domain.csproj", "{B5D0A696-FE03-45B0-8B17-53EC982B490D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Domain", "src\Claims\Claims.Domain\Claims.Domain.csproj", "{B5D0A696-FE03-45B0-8B17-53EC982B490D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims.Infrastructure", "src\Claims\Claims.Infrastructure\Claims.Infrastructure.csproj", "{F9BF9637-7E16-4703-9526-B2E58118A77A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims.Infrastructure", "src\Claims\Claims.Infrastructure\Claims.Infrastructure.csproj", "{F9BF9637-7E16-4703-9526-B2E58118A77A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{71602517-D18E-4959-B4E2-13DD0BCD6F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Api", "src\Shared\Shared.Api\Shared.Api.csproj", "{DC7806C0-F850-478E-92EE-CC31558F51D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Api", "src\Shared\Shared.Api\Shared.Api.csproj", "{DC7806C0-F850-478E-92EE-CC31558F51D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Application", "src\Shared\Shared.Application\Shared.Application.csproj", "{1797A0E7-C2D3-4EA5-9078-0455FD628FEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Application", "src\Shared\Shared.Application\Shared.Application.csproj", "{1797A0E7-C2D3-4EA5-9078-0455FD628FEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Core", "src\Shared\Shared.Core\Shared.Core.csproj", "{2DE1B954-F5D8-4DA2-8E71-6C5EC43533AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Core", "src\Shared\Shared.Core\Shared.Core.csproj", "{2DE1B954-F5D8-4DA2-8E71-6C5EC43533AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Persistence", "src\Shared\Shared.Persistence\Shared.Persistence.csproj", "{CC9B25DA-1128-4203-8729-684C5FFF6575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Persistence", "src\Shared\Shared.Persistence\Shared.Persistence.csproj", "{CC9B25DA-1128-4203-8729-684C5FFF6575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,10 +44,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{268F67FB-056D-4843-8823-19A5F7848271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{268F67FB-056D-4843-8823-19A5F7848271}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{268F67FB-056D-4843-8823-19A5F7848271}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{268F67FB-056D-4843-8823-19A5F7848271}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -98,7 +90,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EC846D1B-22B5-4CED-B0CB-778EBFEE1C33} = {003F7774-8202-4837-8C40-72297F3876C1}
-		{268F67FB-056D-4843-8823-19A5F7848271} = {7B28A9F2-7893-4913-9619-FB562257017D}
 		{4AE50945-5CBD-4A0D-AE5A-513920BF43A8} = {36DE8947-99B8-4FA7-95D3-970F2A881525}
 		{3966CB07-ED50-4B15-B493-35F9B81E11D6} = {4AE50945-5CBD-4A0D-AE5A-513920BF43A8}
 		{9E26F887-FBCB-4B3E-B591-D1591CCF4053} = {4AE50945-5CBD-4A0D-AE5A-513920BF43A8}

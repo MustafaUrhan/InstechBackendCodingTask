@@ -1,3 +1,4 @@
+using Claims.Application.Features.Claims.Notifications.CreateOrDeleteClaim;
 using Claims.Domain.Repositories.Claims;
 using ErrorOr;
 using MediatR;
@@ -10,10 +11,12 @@ public sealed class DeleteClaimCommandHandler: IRequestHandler<DeleteClaimComman
     private readonly IClaimCommandRepository _claimCommandRepository;
     private readonly IClaimQueryRepository _claimQueryRepository;
 
-    public DeleteClaimCommandHandler(IClaimCommandRepository claimCommandRepository, IClaimQueryRepository claimQueryRepository)
+    private readonly IPublisher _publisher;
+    public DeleteClaimCommandHandler(IClaimCommandRepository claimCommandRepository, IClaimQueryRepository claimQueryRepository, IPublisher publisher)
     {
         _claimCommandRepository = claimCommandRepository;
         _claimQueryRepository = claimQueryRepository;
+        _publisher = publisher;
     }
 
     public async Task<ErrorOr<Guid>> Handle(DeleteClaimCommand request, CancellationToken cancellationToken)
@@ -29,6 +32,10 @@ public sealed class DeleteClaimCommandHandler: IRequestHandler<DeleteClaimComman
         claim.IsDeleted = true;
         claim.ModifiedAt = DateTime.UtcNow;
         await _claimCommandRepository.UpdateAsync(claim, cancellationToken);
+
+        var auditNotification = new CreateOrDeleteClaimNotification(claim.Id.ToString(), "DELETE");
+        await _publisher.Publish(auditNotification);
+        
         return request.Id;
     }
 }

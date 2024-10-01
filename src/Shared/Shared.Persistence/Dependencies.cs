@@ -8,7 +8,6 @@ public static class Dependencies
 {
     public static IServiceCollection AddSharedPersistenceFramework(this IServiceCollection services,ConfigurationManager configurationManager)
     {
-        services.AddScoped<IDateTimeProvider, DateTimeProvider>();
         services.AddSqlServers(configurationManager);
         return services;
     }

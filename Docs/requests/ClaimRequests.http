@@ -6,11 +6,11 @@ POST {{baseUrl}}/api/{{version}}/claims
 Content-Type: application/json
 
 {
-  "coverId": "7F2EBC09-57E9-4C9D-FE55-08DCE219470B",
+  "coverId": "2F6E1B67-38AE-4347-FE56-08DCE219470B",
   "created": "2024-09-09T10:00:00Z",
-  "name": "Collision Damage",
+  "name": "Explosive Fire Damage",
   "type": 0,
-  "damageCost": 5000
+  "damageCost": 10000
 }
 
 ### Get Claim by Id
@@ -22,5 +22,5 @@ GET {{baseUrl}}/api/{{version}}/claims
 Content-Type: application/json
 
 ### DELETE Claim
-DELETE {{baseUrl}}/api/{{version}}/claims/569A062F-0130-46D6-A22A-08DCE240175E
+DELETE {{baseUrl}}/api/{{version}}/claims/CC99E0B8-D2B3-4564-C515-08DCE2432B07
 Content-Type: application/json
