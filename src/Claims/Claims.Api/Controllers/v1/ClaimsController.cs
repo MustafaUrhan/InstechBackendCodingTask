@@ -17,19 +17,6 @@ public class ClaimsController : BaseController
     {
     }
 
-    //  [HttpGet]
-    //     public async Task<IEnumerable<Claim>> GetAsync()
-    //     {
-    //         return await _claimsContext.GetClaimsAsync();
-    //     }
-
-    //     [HttpDelete("{id}")]
-    //     public async Task DeleteAsync(string id)
-    //     {
-    //         _auditer.AuditClaim(id, "DELETE");
-    //         await _claimsContext.DeleteItemAsync(id);
-    //     }
-
     [HttpPost]
     public async Task<IActionResult> CreateAsync([FromBody] CreateClaimRequest request)
     {
