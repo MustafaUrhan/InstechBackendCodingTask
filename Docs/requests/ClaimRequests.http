@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:5213
+@version = v1
+
+### Create Claim
+POST {{baseUrl}}/api/{{version}}/claims
+Content-Type: application/json
+
+{
+  "coverId": "7F2EBC09-57E9-4C9D-FE55-08DCE219470B",
+  "created": "2024-09-09T10:00:00Z",
+  "name": "Collision Damage",
+  "type": 0,
+  "damageCost": 5000
+}
+
+### Get Claim by Id
+GET {{baseUrl}}/api/{{version}}/claims/569A062F-0130-46D6-A22A-08DCE240175E
+Content-Type: application/json
+
+### Get all Claims
+GET {{baseUrl}}/api/{{version}}/claims
+Content-Type: application/json
+
+### DELETE Claim
+DELETE {{baseUrl}}/api/{{version}}/claims/569A062F-0130-46D6-A22A-08DCE240175E
+Content-Type: application/json

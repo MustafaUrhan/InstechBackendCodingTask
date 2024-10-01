@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5213
+@version = v1
+
+### Create Cover
+POST {{baseUrl}}/api/{{version}}/covers
+Content-Type: application/json
+
+{
+  "startDate": "2025-01-01",
+  "endDate": "2025-08-01",
+  "type": 0
+}
+
+### Get Cover by Id
+GET {{baseUrl}}/api/{{version}}/covers/906ecdab-0f25-4d6e-dcb0-08dce1fefe55
+Content-Type: application/json
+
+### Get all Covers
+GET {{baseUrl}}/api/{{version}}/covers
+Content-Type: application/json
+
+### Compute Premium
+POST {{baseUrl}}/api/{{version}}/covers/compute
+Content-Type: application/json
+
+{
+  "startDate": "2025-01-01",
+  "endDate": "2025-09-01",
+  "type": 0
+}
+
+### Delete Cover
+DELETE {{baseUrl}}/api/{{version}}/covers/7F2EBC09-57E9-4C9D-FE55-08DCE219470B
+Content-Type: application/json
+
