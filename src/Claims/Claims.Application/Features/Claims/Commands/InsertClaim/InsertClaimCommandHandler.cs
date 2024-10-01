@@ -26,7 +26,8 @@ public sealed class InsertClaimCommandHandler : IRequestHandler<InsertClaimComma
             return Errors.Business.ResultNotFound($"Cover with id {request.CoverId} not found");
         }
 
-        if (request.Created < cover.StartDate || request.Created > cover.EndDate)
+        var isValidDate = request.Created >= cover.StartDate && request.Created <= cover.EndDate;
+        if (!isValidDate)
         {
             return Errors.Validation.ValidationFailed("Claim date is not within the cover period");
         }
